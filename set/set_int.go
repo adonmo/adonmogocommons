@@ -4,14 +4,14 @@ type SetInt struct {
 	set *Set
 }
 
-func NewSetInt(initial []int) *SetInt {
+func NewSetInt(initial ...int) *SetInt {
 	values := []interface{}{}
 	for _, val := range initial {
 		values = append(values, val)
 	}
 
 	return &SetInt{
-		set: NewSet(values),
+		set: NewSet(values...),
 	}
 }
 

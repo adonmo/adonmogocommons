@@ -19,9 +19,9 @@ func main() {
 	logger.WarnF("Printing this message at %v", time.Now())
 	logger.ErrorF("Printing this message at %v", time.Now())
 
-	sEt := set.NewSet([]interface{}{"hey", "hello"})
-	setInt := set.NewSetInt([]int{1, 2, 3, 4, 4})
-	setString := set.NewSetString([]string{"hello", "world", "world"})
+	sEt := set.NewSet([]interface{}{"hey", "hello"}...)
+	setInt := set.NewSetInt([]int{1, 2, 3, 4, 4}...)
+	setString := set.NewSetString([]string{"hello", "world", "world"}...)
 
 	logger.DebugF("length of set with interfaces %v", sEt.Len())
 	logger.DebugF("length of set with ints %v", setInt.Len())
