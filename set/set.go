@@ -5,7 +5,7 @@ type Set struct {
 	hash map[interface{}]nothing
 }
 
-func NewSet(initial []interface{}) *Set {
+func NewSet(initial ...interface{}) *Set {
 	set := &Set{
 		hash: map[interface{}]nothing{},
 	}

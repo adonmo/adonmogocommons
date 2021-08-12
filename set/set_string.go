@@ -4,14 +4,14 @@ type SetString struct {
 	set *Set
 }
 
-func NewSetString(initial []string) *SetString {
+func NewSetString(initial ...string) *SetString {
 	values := []interface{}{}
 	for _, val := range initial {
 		values = append(values, val)
 	}
 
 	return &SetString{
-		set: NewSet(values),
+		set: NewSet(values...),
 	}
 }
 
